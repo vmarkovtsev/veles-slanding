@@ -9,7 +9,6 @@ const video = $("video");
 const $window = $(window);
 const github = $(".github-fork-ribbon-wrapper");
 
-
 function scroll() {
     const pos = $(this).scrollTop();
     let opacity = 1 - pos / navbar_hide_height;
@@ -24,7 +23,7 @@ function scroll() {
     navbar.css({opacity: opacity});
     // The next toggles fix buggy Chrome on Linux, though beneficial for other browsers, too.
     video.toggle(pos < front_height);
-    rotating_thing.toggle(pos + $window.height() >= rotating_thing_top && pos < rotating_thing_bottom);
+    rotating_thing.toggle((pos + $window.height()) >= rotating_thing_top && pos < rotating_thing_bottom);
 }
 
 $window.on('scroll', scroll);

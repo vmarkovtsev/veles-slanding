@@ -6,6 +6,7 @@ $section_padding: 4em;
 $loc_chart_size: 20vw;
 $shade: #505050;
 $border_radius: 0.25em;
+$details_height: 80vh;
 
 body {
   margin: 0;
@@ -518,7 +519,7 @@ $colors: #3366cc #ff9900 #dc3912 #109618 #990099 #0099c6 #dd4477 #66aa00;
 
 .details > .with-picture {
   display: flex;
-  height: 80vh;
+  height: $details_height;
   flex-direction: row;
 }
 
@@ -559,7 +560,7 @@ $colors: #3366cc #ff9900 #dc3912 #109618 #990099 #0099c6 #dd4477 #66aa00;
 #ms {
   animation: spin 15s linear infinite;
   width: 100%;
-  height: 80vh;
+  height: $details_height;
 }
 
 @keyframes spin {
@@ -636,7 +637,7 @@ $ms-size-z: 2 * 3.1177em;
   position: absolute;
   margin: auto;
   width: 100%;
-  height: 80vh;
+  height: $details_height;
   left: 0;
   top: 0;
 }
@@ -654,6 +655,7 @@ $ms-size-z: 2 * 3.1177em;
   display: flex;
   align-items: center;
   flex-direction: row;
+  height: $details_height;
 }
 
 #master-slave-picture {

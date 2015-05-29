@@ -658,6 +658,14 @@ $ms-size-z: 2 * 3.1177em;
   height: $details_height;
 }
 
+#master-slave-desc p {
+  margin-bottom: 1em;
+}
+
+#master-slave-desc p:last-of-type {
+  margin-bottom: 0;
+}
+
 #master-slave-picture {
   padding-left: 2em;
   padding-right: 2em;
@@ -699,7 +707,8 @@ $ms-size-z: 2 * 3.1177em;
 }
 
 #intro {
-  height: 52em;
+  height: 49em;
+  padding-top: 1em;
 }
 
 #intro h3 {

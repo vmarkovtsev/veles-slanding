@@ -25,7 +25,7 @@
 <body>
   <nav>
     <div id="links">
-      {{ toplink("github", "GitHub", "{{ github }}", "octocat") }}
+      {{ toplink("github", "GitHub", "{{ https://github.com/samsung/veles }}", "octocat") }}
       {{ toplink("gerrit", "Gerrit&nbsp;Code&nbsp;Review", "https://velesnet.ml/gerrit", "diffy") }}
       {{ toplink("jenkins", "Jenkins&nbsp;CI", "https://velesnet.ml/jenkins", "jenkins") }}
       {{ toplink("forge", "VelesForge", "https://velesnet.ml/forge", "forge") }}
@@ -89,7 +89,7 @@
   </section>
   <section class="details" id="intro">
     <div>
-      <h3>Written on Python, uses OpenCL or CUDA, employs Flow-Based Programming.</h3>
+      <h3>Written on Python, uses OpenCL or CUDA, employs Flow-Based Programming, under Apache 2.0</h3>
       <ul id="steps">
         <li><img src="img/intro_1.svg">Deploy VELES on Notebook or Cluster with a single command</li>
 
@@ -116,17 +116,24 @@
   <section id="doneright">
     <div class="parallax"></div>
     <div class="boast">
-      <h2>Neural networks done right.</h2>
+      <h2>Neural networks done right. With a human face.</h2>
       <p>veles.znicz NN engine focuses on performance and flexibility. It has little hard-coded entities and enables training
          of all the widely recognized topologies, such as fully connected nets, convolutional nets, reccurent nets etc.</p>
       <p>In-depth introspection and rich debugging facilities helps to develop nets quickly with predictable result.</p>
+      <p>All backends have the same interface and yield the same calculation results or accuracy, with single or
+        <strong>double</strong> precision.</p>
     </div>
   </section>
   <section class="details">
     <div class="with-picture" id="master-slave">
       <div class="description" id="master-slave-desc">
-        <p>ZeroMQ-based star topology of distributed operation handles up to 100 nodes, depending on the task.
-          Optionally, some compression can be applied. The state of things is sent to the Web Status Server.</p>
+        <div>
+          <p>ZeroMQ-based star topology of distributed operation handles up to 100 nodes, depending on the task.
+            Optionally, some compression can be applied. The state of things is sent to the Web Status Server.</p>
+          <p>The whole thing is fault tolerant, the death of a node does not cause the master stop. You can add new nodes
+            dynamically, at any time, with any backends.</p>
+          <p>Snapshotting feature allows recovering from any disaster, restart the training in a different mode and with a different backend.</p>
+        </div>
       </div>
       <div class="picture" id="master-slave-picture">
         <object type="image/svg+xml" data="img/ms.svg" data-src="img/ms.svg" id="ms"></object>
@@ -163,7 +170,7 @@
       Tens of plotting units provide comprehensive insight into the training process.
       <div id="plotters-container">
         <object type="image/svg+xml" data="img/plotters.svg" id="plotters"></object>
-        <iframe id="viewerjs" src="/viewerjs/#../sample.pdf" allowfullscreen webkitallowfullscreen></iframe>
+        <iframe id="viewerjs" src="viewerjs/#../sample.pdf" allowfullscreen webkitallowfullscreen></iframe>
       </div>
     </div>
   </section>
@@ -313,6 +320,8 @@
       <p>Veles is cluster and Docker friendly. Deploy the exported tarball, initialize the pyenv
         environment and you are ready to go - with just 2 simple commands.</p>
 
+      <p>REST API allows to use the trained model in a production environment at once.</p>
+
       <p>Manhole feature allows to execute an interactive IPython session in the running process context at any
         time.</p>
 
@@ -360,7 +369,15 @@
   <footer id="bottom">
     {{ download() }}
     <br><br>
-    Copyright Samsung Electronics Co., Ltd., 2015.
+    Copyright © Samsung Electronics Co., Ltd., 2013-2015. Veles project is released under
+    <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 license</a>; this web site is copyright © Vadim Markovtsev,
+    it's code is released under <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA 3.0 Unported</a> at
+    <a href="https://github.com/vmarkovtsev/veles-slanding">GitHub</a>.<br>
+    We gratefully acknowledge the creators of the following images: "Business and website development doodles elements":
+    Pressureua; "Abstract cubic backgrounds": Dmytro Tolokonov; "Illustration concept of creative collaboration":
+    Kchungtw; MNIST digits: American Census Bureau employees and American high school students; Imagenet Fish: Stanford
+    Vision Lab, Stanford University, Princeton University; Elephants: Tony Karumba; "Star field of Constellation
+    Scorpius": Marc Van Norden.
   </footer>
 
   <!-- build:js js/jquery.min.js -->

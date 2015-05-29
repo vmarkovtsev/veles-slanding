@@ -7,7 +7,7 @@ var shrthnd = require("shrthnd");
 var del = require("del");
 var pngquant = require("imagemin-pngquant");
 var lazypipe = require("lazypipe");
-var dist = "dist/";
+var dist = "/var/www-data/";
 var languages = ["ko", "ru"];
 
 plugins.shorthand = function () {

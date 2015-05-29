@@ -332,6 +332,12 @@ a:hover {
   margin: 0;
 }
 
+pre.ubuntu-download:last-of-type {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #locpie-container {
   float: right;
   max-width: 20vw;

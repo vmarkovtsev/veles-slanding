@@ -1,4 +1,20 @@
-@import "bootstrap";
+// Core variables and mixins
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+// Reset and dependencies
+@import "bootstrap/normalize";
+@import "bootstrap/print";
+
+// Core CSS
+@import "bootstrap/scaffolding";
+@import "bootstrap/type";
+@import "bootstrap/code";
+@import "bootstrap/buttons";
+
+// Components
+@import "bootstrap/wells";
+
 
 $navicon_height: 4em;
 $front_title_offset: 12em;

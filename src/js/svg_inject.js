@@ -1,5 +1,6 @@
-var mobile = /(android|iphone|ipod|windows phone)/.test(navigator.userAgent.toLowerCase());
-
+const animation = Modernizr.prefixed('animation')
+    .replace(/([A-Z])/g, function(str, cap) { return '-' + cap.toLowerCase(); })
+    .replace(/^ms-/,'-ms-');
 
 SVGInjector(document.querySelectorAll('#ms'), {
     evalScripts: false,
@@ -7,9 +8,9 @@ SVGInjector(document.querySelectorAll('#ms'), {
        svg.removeAttribute("width");
        svg.removeAttribute("height");
        if (mobile) {
-         for (let i = 1; i < 7; i++) {
-           $("#message" + i).css({"-webkit-animation": "none", animation: "none"});
-         }
+         let anone = {};
+         anone[animation] = "none";
+         $(".ms-message").css(anone).attr("mobile", "mobile");
        }
     }
 });

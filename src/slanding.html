@@ -39,9 +39,10 @@
       </div>
   </div>
   <section id="promo">
-    <video autoplay="autoplay" data-role="video" loop="loop" width="100%">
-        <source src="video/veles.mp4" type="video/mp4">
-        <source src="video/veles.webm" type="video/webm">
+    <video autoplay="autoplay" data-role="video" loop="loop" width="100%"
+           poster="img/video0.jpg">
+        <source src="video/veles.mp4">
+        <source src="video/veles.webm">
     </video>
     <div id="title">
       <h1 class="fabrica">{% if lang == "en" %}
@@ -387,6 +388,7 @@
   <!-- build:js js/slanding.min.js -->
   <script src="../build/js/scroll.js"></script>
   <script src="../build/js/download.js"></script>
+  <script src="../build/js/video.js"></script>
   <script src="../build/js/jquery.drawPieChart.js"></script>
   <script src="../build/js/locpie.js"></script>
   <script src="../build/js/offset_log_annotations.js"></script>

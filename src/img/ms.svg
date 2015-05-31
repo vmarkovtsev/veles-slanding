@@ -110,6 +110,7 @@
     <circle
        style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="message1"
+       class="ms-message"
        cx="315.36298"
        cy="338.31845"
        r="8.6143446" />
@@ -118,10 +119,12 @@
        cy="296.08087"
        cx="315.25204"
        id="message2"
+       class="ms-message"
        style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <circle
        style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="message3"
+       class="ms-message"
        cx="278.78177"
        cy="274.73853"
        r="8.6143446" />
@@ -130,10 +133,12 @@
        cy="296.03482"
        cx="242.31851"
        id="message4"
+       class="ms-message"
        style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <circle
        style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="message5"
+       class="ms-message"
        cx="242.27669"
        cy="338.27444"
        r="8.6143446" />
@@ -142,6 +147,7 @@
        cy="359.59668"
        cx="278.78177"
        id="message6"
+       class="ms-message"
        style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <circle
        cx="524.24884"

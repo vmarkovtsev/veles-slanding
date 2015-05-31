@@ -46,3 +46,7 @@ window.addEventListener('load', function() {
   adjustDelay(1, -(hours % 10) * 3600 - hour_part);
   adjustDelay(0, -(hours / 10) * 36000 - hour_part);
 });
+
+if (mobile) {
+  $("#countdown").attr("mobile", "mobile");
+}

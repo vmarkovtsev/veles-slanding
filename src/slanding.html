@@ -23,6 +23,9 @@
 {% endmacro %}
 
 <body>
+  <script>
+    var mobile = /(android|iphone|ipod|windows phone)/.test(navigator.userAgent.toLowerCase());
+  </script>
   <nav>
     <div id="links">
       {{ toplink("github", "GitHub", github, "octocat") }}
@@ -39,10 +42,19 @@
       </div>
   </div>
   <section id="promo">
-    <video autoplay="autoplay" data-role="video" loop="loop" width="100%">
-        <source src="video/veles.mp4" type="video/mp4">
-        <source src="video/veles.webm" type="video/webm">
+    <video autoplay="autoplay" data-role="video" loop="loop" width="100%"
+           poster="img/video0.jpg">
+        <source src="video/veles.mp4">
+        <source src="video/veles.webm">
     </video>
+    <script>
+      if (mobile) {
+        (function() {
+          var video = document.getElementsByTagName("video")[0];
+          video.parentNode.removeChild(video);
+        })();
+      }
+    </script>
     <div id="title">
       <h1 class="fabrica">{% if lang == "en" %}
         The VELES
@@ -87,6 +99,11 @@
       {{ download() }}
     </div>
   </section>
+  <script>
+    if (mobile) {
+      document.getElementById("promo").setAttribute("mobile", "mobile");
+    }
+  </script>
   <section class="details" id="intro">
     <div>
       <h3>Written on Python, uses OpenCL or CUDA, employs Flow-Based Programming, under Apache 2.0.</h3>
@@ -384,15 +401,19 @@
   <!-- build:js js/jquery.min.js -->
   <script src="libs/jquery/dist/jquery.min.js"></script>
   <!-- endbuild -->
+
+  <script>
+  $(".parallax").attr("mobile", "mobile");
+  </script>
   <!-- build:js js/slanding.min.js -->
   <script src="../build/js/scroll.js"></script>
   <script src="../build/js/download.js"></script>
   <script src="../build/js/jquery.drawPieChart.js"></script>
   <script src="../build/js/locpie.js"></script>
   <script src="../build/js/offset_log_annotations.js"></script>
+  <script src="libs/modernizr/modernizr.js"></script>
   <script src="libs/svg-injector/svg-injector.js"></script>
   <script src="../build/js/svg_inject.js"></script>
-  <script src="libs/modernizr/modernizr.js"></script>
   <script src="../build/js/countdown.js"></script>
   <!-- endbuild -->
 

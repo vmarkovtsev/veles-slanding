@@ -1,0 +1,4 @@
+node_modules
+build
+src/libs
+.DS_Store

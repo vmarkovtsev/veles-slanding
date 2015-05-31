@@ -224,8 +224,9 @@ div#notebook {
   overflow-x: auto;
   width: 100%;
   padding: 1em 0 1em 0;
-  border: 1px solid #ababab;
-  outline: none;
+  /* Fixes 1px right border override with input box - probably a bug in Chrome */
+  border: 1px solid rgba(0, 0, 0, 0);
+  outline: 1px solid #ababab;
   box-sizing: border-box;
   margin: 1em 0 0 0;
 }

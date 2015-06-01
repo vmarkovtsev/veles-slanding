@@ -403,7 +403,9 @@
   <!-- endbuild -->
 
   <script>
-  $(".parallax").attr("mobile", "mobile");
+    if (mobile) {
+      $(".parallax").attr("mobile", "mobile");
+    }
   </script>
   <!-- build:js js/slanding.min.js -->
   <script src="../build/js/scroll.js"></script>

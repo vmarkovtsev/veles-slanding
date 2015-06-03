@@ -11,7 +11,7 @@
 </head>
 
 {% macro toplink(id, hint, href, img) %}
-<a id="link-{{ id }}" class="toplink" hint="{{ hint }}" href="{{ href }}">
+<a id="link-{{ id }}" class="toplink" hint="{{ hint }}" href="{{ href }}" target="_blank">
   <img src="img/{{ img }}.svg" id="svg-{{ img }}">
 </a>
 {% endmacro %}
@@ -19,7 +19,7 @@
 {% set github = "https://github.com/samsung/veles" %}
 
 {% macro download() %}
-<a class="download" href="{{ github }}/releases">Download</a>
+<a class="download" href="{{ github }}/releases" target="_blank">Download</a>
 {% endmacro %}
 
 <body>
@@ -33,7 +33,8 @@
       {{ toplink("jenkins", "Jenkins&nbsp;CI", "https://velesnet.ml/jenkins", "jenkins") }}
       {{ toplink("forge", "VelesForge", "https://velesnet.ml/forge", "forge") }}
       {{ toplink("benchmarks", "Benchmarks", "https://velesnet.ml/benchmarks", "chart")}}
-      {{ toplink("docs", "Documentation", "https://velesnet.ml/docs", "manual") }}
+      {{ toplink("blog", "Blog", "https://velesnet.ml/blog", "blog")}}
+      {{ toplink("docs", "Docs", "https://velesnet.ml/docs", "manual") }}
     </div>
   </nav>
   <div class="github-fork-ribbon-wrapper right" style="visibility: hidden; opacity: 0;">
@@ -89,7 +90,7 @@
         {% endif %}
         <br>
         {% if lang not in ["ru", "ko"] %}
-        Developed and released as Open Source by {{ samsung() }}
+        Developed and released as open source by {{ samsung() }}
         {% elif lang == "ko" %}
         {{ samsung() }}에 의해 개발.
         {% elif lang == "ru" %}

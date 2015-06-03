@@ -255,25 +255,27 @@ nav {
 }
 
 #links {
-  position: absolute;
-  right: $front_title_offset;
+  margin-top: 0.1em;
+  margin-left: $front_title_offset;
 }
 
 .toplink {
-  color: rgba(255, 255, 255, 0);
   display: inline-block;
+  opacity: 0.6;
+  color: rgba(255, 255, 255, 0);
+  margin-right: 2em;
+}
+
+.toplink:hover {
+  opacity: 1.0;
+  text-decoration: none;
 }
 
 .toplink > img {
   width: $navicon_height;
   height: $navicon_height;
   object-fit: contain;
-  opacity: 0.6;
   display: inline-block;
-}
-
-.toplink > img:hover {
-  opacity: 1.0;
 }
 
 #link-gerrit {
@@ -284,12 +286,9 @@ nav {
   margin-left: -0.5em;
 }
 
-.toplink:hover::after {
+.toplink::after {
   content: attr(hint);
   display: inline-block;
-  position: absolute;
-  left: 26em;
-  top: 0.25em;
   color: white;
   font-family: 'Fabrica', arial, sans-serif;
 }

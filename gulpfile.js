@@ -175,7 +175,13 @@ gulp.task("samplepdf", function () {
 gulp.task("viewerjs", ["viewerjs-images", "viewerjs-html", "viewerjs-css",
                        "viewerjs-js", "samplepdf"]);
 
-var deps = ["fonts", "media", "landing-en", "viewerjs"];
+gulp.task("ie", function() {
+    return gulp.src("src/ie_message.html")
+        .pipe(plugins.newer(dist))
+        .pipe(gulp.dest(dist));
+});
+
+var deps = ["fonts", "media", "landing-en", "viewerjs", "ie"];
 
 gulp.task("landing-en", ["sass", "browserify"], function () {
   var assets = plugins.useref.assets({}, assets_pipeline);

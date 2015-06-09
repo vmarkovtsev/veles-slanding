@@ -109,24 +109,55 @@
     <div>
       <h3>Written on Python, uses OpenCL or CUDA, employs Flow-Based Programming, under Apache 2.0.</h3>
       <ul id="steps">
-        <li><img src="img/intro_1.svg">Deploy VELES on Notebook or Cluster with a single command</li>
-
-        <li><img src="img/intro_2.svg">Create the model from >250 optimized units
+        <li><img src="img/intro_1.svg">
+        {% if lang not in ["ru", "ko"] %} Deploy VELES on Notebook or Cluster with a single command
+        {% elif lang == "ko" %} 단 한 줄의 명령어로 Notebook이나 Cluster에 VELES 배포 가능
+        {% endif %}
         </li>
 
-        <li><img src="img/intro_3.svg">Analyze and serve the dataset on the go using Loaders</li>
-
-        <li><img src="img/intro_4.svg">Train it on PC or High Performance Cluster</li>
-
-        <li>Interactively monitor the training process<img src="img/intro_5.svg">
+        <li><img src="img/intro_2.svg">
+        {% if lang not in ["ru", "ko"] %} Create the model from >250 optimized units
+        {% elif lang == "ko" %} 250개 이상의 최적화된 unit들로부터 모델 생성
+        {% endif %}
         </li>
 
-        <li>Publish the results<img src="img/intro_6.svg">
+        <li><img src="img/intro_3.svg">
+        {% if lang not in ["ru", "ko"] %} Analyze and serve the dataset on the go using Loaders
+        {% elif lang == "ko" %} go를 사용하는 Loaders에서 dataset을 분석 및 제공
+        {% endif %}
         </li>
 
-        <li>Automatically extract the trained model as an application<img src="img/intro_7.svg"></li>
+        <li><img src="img/intro_4.svg">
+        {% if lang not in ["ru", "ko"] %} Train it on PC or High Performance Cluster
+        {% elif lang == "ko" %} PC 또는 고성능 Cluster에서의 훈련
+        {% endif %}
+        </li>
 
-        <li>Run it in the cloud<img src="img/intro_8.svg">
+        <li>
+          {% if lang not in ["ru", "ko"] %} Interactively monitor the training process
+          {% elif lang == "ko" %} 훈련 프로세스에 대한 상호작용적 관찰
+          {% endif %}
+          <img src="img/intro_5.svg">
+        </li>
+
+        <li>
+          {% if lang not in ["ru", "ko"] %} Publish the results
+          {% elif lang == "ko" %} 결과의 배포
+          {% endif %}
+          <img src="img/intro_6.svg">
+        </li>
+
+        <li>
+          {% if lang not in ["ru", "ko"] %} Automatically extract the trained model as an application
+          {% elif lang == "ko" %} 훈련된 모델을 application으로 자동 추출
+          {% endif %}
+          <img src="img/intro_7.svg"></li>
+
+        <li>
+          {% if lang not in ["ru", "ko"] %} Run it in the cloud
+          {% elif lang == "ko" %} Cloud에서의 구동
+          {% endif %}
+          <img src="img/intro_8.svg">
         </li>
       </ul>
     </div>

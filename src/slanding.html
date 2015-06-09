@@ -373,15 +373,28 @@
   <section id="contributions">
     <div class="parallax"></div>
     <div class="boast">
-      <h2>Contributions are welcome.</h2>
+      <h2> 
+      {% if lang not in ["ru", "ko"] %} Contributions are welcome.
+      {% elif lang == "ko" %} 여러분의 참여를 기다립니다.
+      {% endif %}
+      </h2>
 
-      <p>Send pull requests on GitHub, they will be automatically converted into
+      <p>
+        {% if lang not in ["ru", "ko"] %} Send pull requests on GitHub, they will be automatically converted into
         <a href="https://velesnet.ml/gerrit">Gerrit patchsets</a>.
-        Watch how nightly tests run in <a href="https://velesnet.ml/jenkins">Jenkins</a>.</p>
+        Watch how nightly tests run in <a href="https://velesnet.ml/jenkins">Jenkins</a>.
+        {% elif lang == "ko" %} Github로 pull request를 보내면, 자동으로 <a href="https://velesnet.ml/gerrit">Gerrit patchsets</a>로 전환됩니다. 
+        Nightly tests는 <a href="https://velesnet.ml/jenkins">Jenkins</a>에서 확인하실 수 있습니다.
+        {% endif %}
+      </p>
 
-      <p>There is plenty of work to do: port to Windows and Mac OS X, add CuDNN
+      <p> 
+        {% if lang not in ["ru", "ko"] %} There is plenty of work to do: port to Windows and Mac OS X, add CuDNN
         support, extend reporting options, improve the distributed operation and
-        many, many more.</p>
+        many, many more.
+        {% elif lang == "ko" %} VELES는 Windows와 Mac OS X로 port, CUDNN 지원, reporting option 확장, 분산 모드의 향상 등 다양한 기능의 개발 및 향상이 필요합니다. 여러분의 참여를 기다립니다.
+        {% endif %}
+      </p>
     </div>
   </section>
   <footer id="bottom">

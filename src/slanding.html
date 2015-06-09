@@ -84,7 +84,7 @@
         {% if lang not in ["ru", "ko"] %}
         You change parameters. Veles takes the rest.
         {% elif lang == "ko" %}
-        당신은 모델 매개 변수를 변경합니다. VELES 모든 나머지합니다.
+        모델 매개 변수만 변경하세요. 그 나머지는 VELES의 몫입니다.
         {% elif lang == "ru" %}
         Вы изменяете параметры. VELES позаботится об остальном.
         {% endif %}
@@ -92,7 +92,7 @@
         {% if lang not in ["ru", "ko"] %}
         Developed and released as open source by {{ samsung() }}
         {% elif lang == "ko" %}
-        {{ samsung() }}에 의해 개발.
+        이 프로젝트는 Open Source 프로젝트 입니다. developed by {{ samsung() }}
         {% elif lang == "ru" %}
         Открытый проект, разработанный в {{ samsung() }}
         {% endif %}
@@ -109,24 +109,55 @@
     <div>
       <h3>Written on Python, uses OpenCL or CUDA, employs Flow-Based Programming, under Apache 2.0.</h3>
       <ul id="steps">
-        <li><img src="img/intro_1.svg">Deploy VELES on Notebook or Cluster with a single command</li>
-
-        <li><img src="img/intro_2.svg">Create the model from >250 optimized units
+        <li><img src="img/intro_1.svg">
+        {% if lang not in ["ru", "ko"] %} Deploy VELES on Notebook or Cluster with a single command
+        {% elif lang == "ko" %} 단 한 줄의 명령어로 Notebook이나 Cluster에 VELES 배포 가능
+        {% endif %}
         </li>
 
-        <li><img src="img/intro_3.svg">Analyze and serve the dataset on the go using Loaders</li>
-
-        <li><img src="img/intro_4.svg">Train it on PC or High Performance Cluster</li>
-
-        <li>Interactively monitor the training process<img src="img/intro_5.svg">
+        <li><img src="img/intro_2.svg">
+        {% if lang not in ["ru", "ko"] %} Create the model from >250 optimized units
+        {% elif lang == "ko" %} 250개 이상의 최적화된 unit들로부터 모델 생성
+        {% endif %}
         </li>
 
-        <li>Publish the results<img src="img/intro_6.svg">
+        <li><img src="img/intro_3.svg">
+        {% if lang not in ["ru", "ko"] %} Analyze and serve the dataset on the go using Loaders
+        {% elif lang == "ko" %} go를 사용하는 Loaders에서 dataset을 분석 및 제공
+        {% endif %}
         </li>
 
-        <li>Automatically extract the trained model as an application<img src="img/intro_7.svg"></li>
+        <li><img src="img/intro_4.svg">
+        {% if lang not in ["ru", "ko"] %} Train it on PC or High Performance Cluster
+        {% elif lang == "ko" %} PC 또는 고성능 Cluster에서의 훈련
+        {% endif %}
+        </li>
 
-        <li>Run it in the cloud<img src="img/intro_8.svg">
+        <li>
+          {% if lang not in ["ru", "ko"] %} Interactively monitor the training process
+          {% elif lang == "ko" %} 훈련 프로세스에 대한 상호작용적 관찰
+          {% endif %}
+          <img src="img/intro_5.svg">
+        </li>
+
+        <li>
+          {% if lang not in ["ru", "ko"] %} Publish the results
+          {% elif lang == "ko" %} 결과의 배포
+          {% endif %}
+          <img src="img/intro_6.svg">
+        </li>
+
+        <li>
+          {% if lang not in ["ru", "ko"] %} Automatically extract the trained model as an application
+          {% elif lang == "ko" %} 훈련된 모델을 application으로 자동 추출
+          {% endif %}
+          <img src="img/intro_7.svg"></li>
+
+        <li>
+          {% if lang not in ["ru", "ko"] %} Run it in the cloud
+          {% elif lang == "ko" %} Cloud에서의 구동
+          {% endif %}
+          <img src="img/intro_8.svg">
         </li>
       </ul>
     </div>
@@ -373,15 +404,28 @@
   <section id="contributions">
     <div class="parallax"></div>
     <div class="boast">
-      <h2>Contributions are welcome.</h2>
+      <h2> 
+      {% if lang not in ["ru", "ko"] %} Contributions are welcome.
+      {% elif lang == "ko" %} 여러분의 참여를 기다립니다.
+      {% endif %}
+      </h2>
 
-      <p>Send pull requests on GitHub, they will be automatically converted into
+      <p>
+        {% if lang not in ["ru", "ko"] %} Send pull requests on GitHub, they will be automatically converted into
         <a href="https://velesnet.ml/gerrit">Gerrit patchsets</a>.
-        Watch how nightly tests run in <a href="https://velesnet.ml/jenkins">Jenkins</a>.</p>
+        Watch how nightly tests run in <a href="https://velesnet.ml/jenkins">Jenkins</a>.
+        {% elif lang == "ko" %} Github로 pull request를 보내면, 자동으로 <a href="https://velesnet.ml/gerrit">Gerrit patchsets</a>로 전환됩니다. 
+        Nightly tests는 <a href="https://velesnet.ml/jenkins">Jenkins</a>에서 확인하실 수 있습니다.
+        {% endif %}
+      </p>
 
-      <p>There is plenty of work to do: port to Windows and Mac OS X, add CuDNN
+      <p> 
+        {% if lang not in ["ru", "ko"] %} There is plenty of work to do: port to Windows and Mac OS X, add CuDNN
         support, extend reporting options, improve the distributed operation and
-        many, many more.</p>
+        many, many more.
+        {% elif lang == "ko" %} VELES는 Windows와 Mac OS X로 port, CUDNN 지원, reporting option 확장, 분산 모드의 향상 등 다양한 기능의 개발 및 향상이 필요합니다. 여러분의 참여를 기다립니다.
+        {% endif %}
+      </p>
     </div>
   </section>
   <footer id="bottom">

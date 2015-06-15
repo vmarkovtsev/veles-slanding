@@ -166,11 +166,23 @@
     <div class="parallax"></div>
     <div class="boast">
       <h2>Neural networks done right. With a human face.</h2>
-      <p>veles.znicz NN engine focuses on performance and flexibility. It has little hard-coded entities and enables training
-         of all the widely recognized topologies, such as fully connected nets, convolutional nets, reccurent nets etc.</p>
-      <p>In-depth introspection and rich debugging facilities helps to develop nets quickly with predictable result.</p>
-      <p>All backends have the same interface and yield the same calculation results or accuracy, with single or
-        <strong>double</strong> precision.</p>
+      <p>
+        {% if lang not in ["ru", "ko"] %} veles.znicz NN engine focuses on performance and flexibility. It has little hard-coded entities and enables training
+         of all the widely recognized topologies, such as fully connected nets, convolutional nets, reccurent nets etc.
+        {% elif lang == "ko" %} veles.znicz NN engine은 성능과 유연성에 집중하고 있습니다. Hard coding된 일부 엔티티들을 통해, fully connected nets, convolutional nets, reccurent nets 등의 널리 알려진 모든 위상의 학습이 가능하게 합니다. 
+        {% endif %}
+      </p>
+      <p>
+        {% if lang not in ["ru", "ko"] %} In-depth introspection and rich debugging facilities helps to develop nets quickly with predictable result.
+        {% elif lang == "ko" %} In-depth introspection과 rich debugging facilities는 예측가능한 결과를 가지고 신속하게 net을 개발할 수 있도록 합니다.
+        {% endif %}
+      </p>
+      <p>
+        {% if lang not in ["ru", "ko"] %} All backends have the same interface and yield the same calculation results or accuracy, with single or
+        <strong>double</strong> precision.
+        {% elif lang == "ko" %} 모든 backend는 동일한 인터페이스를 가지며, 
+        {% endif %}
+        </p>
     </div>
   </section>
   <section class="details">

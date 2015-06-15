@@ -180,7 +180,7 @@
       <p>
         {% if lang not in ["ru", "ko"] %} All backends have the same interface and yield the same calculation results or accuracy, with single or
         <strong>double</strong> precision.
-        {% elif lang == "ko" %} 모든 backend는 동일한 인터페이스를 가지며, 
+        {% elif lang == "ko" %} 모든 backend는 동일한 인터페이스를 가지며, 계산 결과 및 정확도의 동일성을 보장합니다. 
         {% endif %}
         </p>
     </div>
@@ -189,8 +189,12 @@
     <div class="with-picture" id="master-slave">
       <div class="description" id="master-slave-desc">
         <div>
-          <p>ZeroMQ-based star topology of distributed operation handles up to 100 nodes, depending on the task.
-            Optionally, some compression can be applied. The state of things is sent to the Web Status Server.</p>
+          <p>
+            {% if lang not in ["ru", "ko"] %} ZeroMQ-based star topology of distributed operation handles up to 100 nodes, depending on the task.
+            Optionally, some compression can be applied. The state of things is sent to the Web Status Server.
+            {% elif lang == "ko" %} 분산 모드의 ZeroMQ-based star topology는 task에 따라 100개 이상의 노드를 다를 수 있습니다. 선택적으로 압축이 수행 될 수도 있습니다. 일의 진행 상황은 Web Status Server로 보내집니다.
+            {% endif %}
+            </p>
           <p>The whole thing is fault tolerant, the death of a node does not cause the master stop. You can add new nodes
             dynamically, at any time, with any backends.</p>
           <p>Snapshotting feature allows recovering from any disaster, restart the training in a different mode and with a different backend.</p>

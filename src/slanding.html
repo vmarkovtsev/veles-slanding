@@ -389,7 +389,7 @@
       <p>
         {% if lang not in ["ru", "ko"] %} Extract features in Hadoop and classify objects in Veles. Analyze data
         in Veles and pass the results next through the pipeline.
-        {% elif lang == "ko" %} Hadoop으로 기능들을 추출하고, Veles로 object를 분류합니다. 
+        {% elif lang == "ko" %} Hadoop으로 기능들을 추출하고, Veles로 object들을 분류, 분석하고 pipeline을 통해 결과를 전달합니다. 
         {% endif %}
       </p>
     </div>
@@ -397,16 +397,26 @@
   <section class="details">
     <div class="with-picture" id="veles-arch">
       <div class="description">
-        <p>Machine learning model execution goes in a <em>workflow</em>, which consists of <em>units</em> and child
+        <p>
+          {% if lang not in ["ru", "ko"] %} Machine learning model execution goes in a <em>workflow</em>, which consists of <em>units</em> and child
           workflows.
-          Units represent logically independent and integral algorithm parts. E.g. single network layer is a unit; the
-          gradient descent step is another unit.</p>
+          Units represent logically independent and integral algorithm parts. E.g. single network layer is a unit; the gradient descent step is another unit.
+          {% elif lang == "ko" %} 기계 학습 모델은 unit과 자식 작업(child workflow)으로 구성된 '작업(workflow)'에서 실행됩니다. unit은 논리적으로 독립된 필수 알고리즘의 일부를 뜻하며, 예를 들어 single network layer는 하나의 unit이 됩니다.  
+          {% endif %}
+        </p>
 
-        <p>Veles uses a typical data driven approach, where control flow is ruled by data processing though control flow
-          links
-          between units.</p>
+        <p>
+          {% if lang not in ["ru", "ko"] %} Veles uses a typical data driven approach, where control flow is ruled by data processing through control flow
+          links between units.
+          {% elif lang == "ko" %} Veles는 전형적인 data driven 방식을 사용합니다.
+          {% endif %}
+        </p>
 
-        <p>Such architecture allows easily manageable data parallel and model parallel execution of models.</p>
+        <p>
+          {% if lang not in ["ru", "ko"] %} Such architecture allows easily manageable data parallel and model parallel execution of models.
+          {% elif lang == "ko" %} 이러한 구조를 통해 data와 model 병렬 실행 모델을 쉽게 관리할 수 있습니다. 
+          {% endif %}
+        </p>
       </div>
       <object type="image/svg+xml" data="img/workflow.svg" id="workflow" class="picture"></object>
     </div>
@@ -416,17 +426,37 @@
     <div class="boast">
       <h2>Packed with features.</h2>
 
-      <p>Veles is cluster and Docker friendly. Deploy the exported tarball, initialize the pyenv
-        environment and you are ready to go - with just 2 simple commands.</p>
+      <p>
+        {% if lang not in ["ru", "ko"] %} Veles is cluster and Docker friendly. Deploy the exported tarball, initialize the pyenv
+        environment and you are ready to go - with just 2 simple commands.
+        {% elif lang == "ko" %} Veles는 cluster이고, Docker 친화적입니다. 간단한 두개의 명령어를 이용하여, tarball을 배포하고 pyenv 환견을 초기화하면 모든 준비는 끝납니다. 
+        {% endif %}
+        </p>
 
-      <p>REST API allows to use the trained model in a production environment at once.</p>
+      <p>
+        {% if lang not in ["ru", "ko"] %} REST API allows to use the trained model in a production environment at once.
+        {% elif lang == "ko" %} REST API를 이용하면 한번에 생산환경에서 훈련 모델을 사용하게 할 수 있습니다.
+        {% endif %}
+      </p>
 
-      <p>Manhole feature allows to execute an interactive IPython session in the running process context at any
-        time.</p>
+      <p>
+        {% if lang not in ["ru", "ko"] %} Manhole feature allows to execute an interactive IPython session in the running process context at any
+        time.
+        {% elif lang == "ko" %} Manhole 기능은 실행 프로세스 상태에서 언제든지 대화형 IPython 세션을 실행할 수 있게 합니다. 
+        {% endif %}
+      </p>
 
-      <p>Live reload feature allows changing the Python code without restarting the process.</p>
+      <p>
+        {% if lang not in ["ru", "ko"] %} Live reload feature allows changing the Python code without restarting the process.
+        {% elif lang == "ko" %} Live reload 기능으로 프로세스를 재시작하지 않고도 Python 코드를 변경할 수 있습니다.
+        {% endif %}
+      </p>
 
-      <p>And many, many more...</p>
+      <p>
+        {% if lang not in ["ru", "ko"] %} And many, many more...
+        {% elif lang == "ko" %} 그리고, 더 많은 것들이 가능합니다. 
+        {% endif %}
+        </p>
     </div>
   </section>
   <section class="details">
@@ -443,10 +473,16 @@
           {% endfor %}
         </div>
       </div>
-      Veles platform is built on top of many open source projects.<br>
+      {% if lang not in ["ru", "ko"] %} Veles platform is built on top of many open source projects.<br>
+      {% elif lang == "ko" %} Veles는 다양한 오픈소스 프로젝트들을 기반으로 합니다.<br>
+      {% endif %}
       <img id="deps" src="img/deps.png">
       <blockquote id="newton">
-        <p>If I have seen further it is by standing on the shoulders of giants.</p>
+        <p>
+          {% if lang not in ["ru", "ko"] %} If I have seen further it is by standing on the shoulders of giants.
+          {% elif lang == "ko" %} 내가 이 세상을 멀리 볼 수 있는 것은 거인의 어깨 위에 올라서 있기 때문이다.
+          {% endif %}
+        </p>
         <footer>Isaac Newton</footer>
       </blockquote>
     </div>
@@ -473,7 +509,7 @@
         {% if lang not in ["ru", "ko"] %} There is plenty of work to do: port to Windows and Mac OS X, add CuDNN
         support, extend reporting options, improve the distributed operation and
         many, many more.
-        {% elif lang == "ko" %} VELES는 Windows와 Mac OS X로 port, CUDNN 지원, reporting option 확장, 분산 모드의 향상 등 다양한 기능의 개발 및 향상이 필요합니다. 여러분의 참여를 기다립니다.
+        {% elif lang == "ko" %} VELES는 아직 갈 길이 멉니다. Windows와 Mac OS X로 port, CUDNN 지원, reporting option 확장, 분산 모드의 향상 등 해야할 일들이 많습니다. 여러분의 참여를 기다립니다.
         {% endif %}
       </p>
     </div>

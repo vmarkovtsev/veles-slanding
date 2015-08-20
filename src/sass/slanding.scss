@@ -367,7 +367,7 @@ a:hover {
   margin: 0;
 }
 
-#bottom .ubuntu-download, #bottom .download {
+#bottom .ubuntu-download, #bottom .download, #developed_by {
   display: table;
   margin-left: auto;
   margin-right: auto;
@@ -820,4 +820,9 @@ $step-img-size: 2em;
   border: 0.1em solid black;
   width: $step-img-size * 2;
   height: $step-img-size * 2;
+}
+
+#developed_by {
+  @extend .boast-content;
+  margin-bottom: 1em;
 }

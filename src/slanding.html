@@ -77,10 +77,6 @@
           class="boast-content fabrica"
       {% endif %}
       >
-        {% macro samsung() %}
-        <img src="img/samsung.svg" id="svg-samsung">
-        {% endmacro %}
-
         {% if lang not in ["ru", "ko"] %}
         You change parameters. Veles takes the rest.
         {% elif lang == "ko" %}
@@ -88,14 +84,7 @@
         {% elif lang == "ru" %}
         Вы изменяете параметры. VELES позаботится об остальном.
         {% endif %}
-        <br>
-        {% if lang not in ["ru", "ko"] %}
-        Developed and released as open source by {{ samsung() }}
-        {% elif lang == "ko" %}
-        이 프로젝트는 Open Source 프로젝트 입니다. developed by {{ samsung() }}
-        {% elif lang == "ru" %}
-        Открытый проект, разработанный в {{ samsung() }}
-        {% endif %}
+      <br><br>
       </h3>
       {{ download() }}
     </div>
@@ -515,6 +504,18 @@
     </div>
   </section>
   <footer id="bottom">
+    {% macro samsung() %}
+    <img src="img/samsung.svg" id="svg-samsung">
+    {% endmacro %}
+    <h3 id="developed_by">
+    {% if lang not in ["ru", "ko"] %}
+    Developed and released as open source by {{ samsung() }}
+    {% elif lang == "ko" %}
+    이 프로젝트는 Open Source 프로젝트 입니다. developed by {{ samsung() }}
+    {% elif lang == "ru" %}
+    Проект разработан в {{ samsung() }}
+    {% endif %}
+    </h3>
     {{ download() }}
     <br><br>
     Copyright © Samsung Electronics Co., Ltd., 2013-2015. Veles project is released under

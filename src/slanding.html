@@ -2,6 +2,30 @@
 <html lang="{{ lang }}">
 <head>
   <meta charset="utf-8"/>
+  <link rel="alternate" hreflang="en" href="//slanding_en.html">
+  <link rel="alternate" hreflang="ru" href="//slanding_ru.html">
+  <link rel="alternate" hreflang="ko" href="//slanding_ko.html">
+  <title>VELES</title>
+  <meta property="og:image" content="/img/veles.png"/>
+  <meta property="og:title" content="VELES"/>
+  <meta property="og:description" content="
+  {% if lang not in ["ru", "ko"] %}
+  Distributed platform for rapid Deep learning application development.
+  {% elif lang == "ko" %}
+  분산 기계 학습 플랫폼
+  {% elif lang == "ru" %}
+  Высокопроизводительная распределённая платформа для машинного обучения
+  {% endif %}
+  "/>
+  <meta name="description" content="
+  {% if lang not in ["ru", "ko"] %}
+  Distributed platform for rapid Deep learning application development.
+  {% elif lang == "ko" %}
+  분산 기계 학습 플랫폼
+  {% elif lang == "ru" %}
+  Высокопроизводительная распределённая платформа для машинного обучения
+  {% endif %}
+  ">
   <!-- build:css css/slanding.min.css -->
   <link rel="stylesheet" type="text/css" href="libs/github-fork-ribbon-css/gh-fork-ribbon.css"/>
   <link rel="stylesheet" type="text/css" href="../build/css/slanding.css"/>
@@ -11,8 +35,8 @@
 </head>
 
 {% macro toplink(id, hint, href, img) %}
-<a id="link-{{ id }}" class="toplink" hint="{{ hint }}" href="{{ href }}" target="_blank">
-  <img src="img/{{ img }}.svg" id="svg-{{ img }}">
+<a id="link-{{ id }}" class="toplink" href="{{ href }}" target="_blank" hint="{{ hint }}">
+  <img src="img/{{ img }}.svg" id="svg-{{ img }}" alt="{{ hint }}" title="{{ hint }}">
 </a>
 {% endmacro %}
 
@@ -98,25 +122,25 @@
     <div>
       <h3>Written on Python, uses OpenCL or CUDA, employs Flow-Based Programming, under Apache 2.0.</h3>
       <ul id="steps">
-        <li><img src="img/intro_1.svg">
+        <li><img src="img/intro_1.svg" alt="1">
         {% if lang not in ["ru", "ko"] %} Deploy VELES on Notebook or Cluster with a single command
         {% elif lang == "ko" %} 단 한 줄의 명령어로 Notebook이나 Cluster에 VELES 배포 가능
         {% endif %}
         </li>
 
-        <li><img src="img/intro_2.svg">
+        <li><img src="img/intro_2.svg" alt="2">
         {% if lang not in ["ru", "ko"] %} Create the model from >250 optimized units
         {% elif lang == "ko" %} 250개 이상의 최적화된 unit들로부터 모델 생성
         {% endif %}
         </li>
 
-        <li><img src="img/intro_3.svg">
+        <li><img src="img/intro_3.svg" alt="3">
         {% if lang not in ["ru", "ko"] %} Analyze and serve the dataset on the go using Loaders
         {% elif lang == "ko" %} go를 사용하는 Loaders에서 dataset을 분석 및 제공
         {% endif %}
         </li>
 
-        <li><img src="img/intro_4.svg">
+        <li><img src="img/intro_4.svg" alt="4">
         {% if lang not in ["ru", "ko"] %} Train it on PC or High Performance Cluster
         {% elif lang == "ko" %} PC 또는 고성능 Cluster에서의 훈련
         {% endif %}
@@ -126,27 +150,27 @@
           {% if lang not in ["ru", "ko"] %} Interactively monitor the training process
           {% elif lang == "ko" %} 훈련 프로세스에 대한 상호작용적 관찰
           {% endif %}
-          <img src="img/intro_5.svg">
+          <img src="img/intro_5.svg" alt="5">
         </li>
 
         <li>
           {% if lang not in ["ru", "ko"] %} Publish the results
           {% elif lang == "ko" %} 결과의 배포
           {% endif %}
-          <img src="img/intro_6.svg">
+          <img src="img/intro_6.svg" alt="6">
         </li>
 
         <li>
           {% if lang not in ["ru", "ko"] %} Automatically extract the trained model as an application
           {% elif lang == "ko" %} 훈련된 모델을 application으로 자동 추출
           {% endif %}
-          <img src="img/intro_7.svg"></li>
+          <img src="img/intro_7.svg" alt="7"></li>
 
         <li style="margin-left: 50%;">
           {% if lang not in ["ru", "ko"] %} Run it in the cloud
           {% elif lang == "ko" %} Cloud에서의 구동
           {% endif %}
-          <img src="img/intro_8.svg">
+          <img src="img/intro_8.svg" alt="8">
         </li>
       </ul>
     </div>
@@ -315,15 +339,15 @@
       {% endif %}
     </div>
     <pre id="loader-sample">
-<div class="log-annotation">Requires no data preprocessing</div><span class="log-info">INFO</span>:MnistLoader:Loading from original MNIST files...
+<span class="log-annotation">Requires no data preprocessing</span><span class="log-info">INFO</span>:MnistLoader:Loading from original MNIST files...
 <span class="log-info">INFO</span>:MnistLoader:Minibatch size is set to 88
-<div class="log-annotation">See the number of samples in each set</div><span class="log-info">INFO</span>:MnistLoader:Samples number: test: 0, validation: 10000, train: 60000
+<span class="log-annotation">See the number of samples in each set</span><span class="log-info">INFO</span>:MnistLoader:Samples number: test: 0, validation: 10000, train: 60000
 <span class="log-debug">DEBUG:MnistLoader:Shuffling, remaining limit is 4294967294</span>
 <span class="log-debug">DEBUG:MnistLoader:Shuffled train set</span>
-<div class="log-annotation">Various data normalization algorithms</div><span class="log-info">INFO</span>:MnistLoader:Normalizing to linear...
+<span class="log-annotation">Various data normalization algorithms</span><span class="log-info">INFO</span>:MnistLoader:Normalizing to linear...
 <span class="log-debug">DEBUG:MnistLoader:Data range: (0.000000, 255.000000), </span>
 <span class="log-debug">DEBUG:MnistLoader:Normalized data range: (-1.000000, 1.000000), </span>
-<div class="log-annotation">The number of classes in the raw data</div><span class="log-info">INFO</span>:MnistLoader:There are 10 unique labels
+<span class="log-annotation">The number of classes in the raw data</span><span class="log-info">INFO</span>:MnistLoader:There are 10 unique labels
 <span class="log-info">INFO</span>:MnistLoader:train label cardinalities: min: 5421 (&quot;5&quot;), max: 6742 (&quot;1&quot;), avg: 6000, σ: 322 (5%)
 <span class="log-debug">DEBUG:MnistLoader:Detailed train label stats:
 +-------+-------------+------+---------------------------+
@@ -340,7 +364,7 @@
 |   8   |        5851 |  9.8 | *********************     |
 |   9   |        5949 |  9.9 | **********************    |
 +-------+-------------+------+---------------------------+</span>
-<div class="log-annotation">Calculates the cardinality standard deviation to reflect the balance</div><span
+<span class="log-annotation">Calculates the cardinality standard deviation to reflect the balance</span><span
             class="log-info">INFO</span>:MnistLoader:validation label cardinalities: min: 892 (&quot;5&quot;), max: 1135 (&quot;1&quot;), avg: 1000, σ: 59 (5%)
 <span class="log-debug">DEBUG:MnistLoader:Detailed validation label stats:
 +-------+-------------+------+---------------------------+
@@ -357,7 +381,7 @@
 |   8   |         974 |  9.7 | *********************     |
 |   9   |        1009 | 10.1 | **********************    |
 +-------+-------------+------+---------------------------+</span>
-<div class="log-annotation">Does a simple test on mutual set balance</div><span class="log-info">INFO</span>:MnistLoader:<span
+<span class="log-annotation">Does a simple test on mutual set balance</span><span class="log-info">INFO</span>:MnistLoader:<span
             class="log-success">OK: train and validation labels have the same distributions (Χ-square test's p-value is 1.000)</span>
 <span class="log-info">INFO</span>:MnistLoader:Will try to store the entire dataset on the device
 <span class="log-debug">DEBUG:MnistLoader:Used the cached fullbatch_loader for engine &quot;ocl&quot;</span></pre>
@@ -465,7 +489,7 @@
       {% if lang not in ["ru", "ko"] %} Veles platform is built on top of many open source projects.<br>
       {% elif lang == "ko" %} Veles는 다양한 오픈소스 프로젝트들을 기반으로 합니다.<br>
       {% endif %}
-      <img id="deps" src="img/deps.png">
+      <img id="deps" src="img/deps.png" alt="Dependencies">
       <blockquote id="newton">
         <p>
           {% if lang not in ["ru", "ko"] %} If I have seen further it is by standing on the shoulders of giants.
@@ -505,7 +529,7 @@
   </section>
   <footer id="bottom">
     {% macro samsung() %}
-    <img src="img/samsung.svg" id="svg-samsung">
+    <img src="img/samsung.svg" id="svg-samsung" alt="Samsung">
     {% endmacro %}
     <h3 id="developed_by">
     {% if lang not in ["ru", "ko"] %}
@@ -520,7 +544,7 @@
     <br><br>
     Copyright © Samsung Electronics Co., Ltd., 2013-2015. Veles project is released under
     <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 license</a> and was originally developed at
-    Samsung R&D Institute Russia. This web site is copyright © Vadim Markovtsev,
+    Samsung R&amp;D Institute Russia. This web site is copyright © Vadim Markovtsev,
     it's code is released under <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA 3.0 Unported</a> at
     <a href="https://github.com/vmarkovtsev/veles-slanding">GitHub</a>.<br>
     We gratefully acknowledge the creators of the following images: "Business and website development doodles elements":
